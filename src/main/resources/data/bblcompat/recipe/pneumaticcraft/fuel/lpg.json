@@ -14,5 +14,6 @@
     "amount": 12,
     "id": "pneumaticcraft:lpg"
   },
-  "temp": 1100
+  "temp": 1100,
+  "duration": 100
 }

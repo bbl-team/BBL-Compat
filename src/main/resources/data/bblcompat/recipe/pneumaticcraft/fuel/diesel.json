@@ -14,5 +14,6 @@
     "amount": 10,
     "id": "pneumaticcraft:diesel"
   },
-  "temp": 1000
+  "temp": 1000,
+  "duration": 120
 }

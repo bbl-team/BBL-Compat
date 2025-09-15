@@ -14,5 +14,6 @@
     "amount": 15,
     "id": "pneumaticcraft:lubricant"
   },
-  "temp": 500
+  "temp": 500,
+  "duration": 300
 }

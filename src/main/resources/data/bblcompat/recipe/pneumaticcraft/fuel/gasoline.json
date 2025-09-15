@@ -14,5 +14,6 @@
     "amount": 20,
     "id": "pneumaticcraft:gasoline"
   },
-  "temp": 1400
+  "temp": 1400,
+  "duration": 40
 }

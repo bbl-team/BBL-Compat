@@ -2,6 +2,9 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.4.10
+Fixed Pneumaticcraft fuels not working in latest casting update
+
 5.4.9
 Ignore Block State for In World Recipe Block Integration now optional, prevents issues with errors in logs when field is missing
 

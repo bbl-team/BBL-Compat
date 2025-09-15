@@ -14,5 +14,6 @@
     "amount": 50,
     "id": "pneumaticcraft:oil"
   },
-  "temp": 1000
+  "temp": 1000,
+  "duration": 300
 }

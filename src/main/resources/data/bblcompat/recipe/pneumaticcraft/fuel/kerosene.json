@@ -14,5 +14,6 @@
     "amount": 10,
     "id": "pneumaticcraft:kerosene"
   },
-  "temp": 1200
+  "temp": 1200,
+  "duration": 80
 }
