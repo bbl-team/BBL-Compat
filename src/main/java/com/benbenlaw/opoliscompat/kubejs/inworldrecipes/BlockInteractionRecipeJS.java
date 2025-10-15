@@ -3,7 +3,6 @@ package com.benbenlaw.opoliscompat.kubejs.inworldrecipes;
 import com.benbenlaw.core.recipe.ChanceResult;
 import com.benbenlaw.inworldrecipes.recipes.BlockTarget;
 import com.benbenlaw.inworldrecipes.util.ClickType;
-import com.benbenlaw.inworldrecipes.util.ClickTypeCodec;
 import com.benbenlaw.opoliscompat.kubejs.BlockTargetComponent;
 import com.benbenlaw.opoliscompat.kubejs.ChanceResultComponent;
 import com.benbenlaw.opoliscompat.kubejs.ClickTypeComponent;

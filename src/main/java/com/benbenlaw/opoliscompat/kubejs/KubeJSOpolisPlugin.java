@@ -50,8 +50,6 @@ public class KubeJSOpolisPlugin implements KubeJSPlugin {
             }
         }
 
-
-
         //Casting
         event.register(ResourceLocation.fromNamespaceAndPath("casting", "fuel"), FuelRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("casting", "melting"), MeltingRecipeJS.SCHEMA);
@@ -63,8 +61,9 @@ public class KubeJSOpolisPlugin implements KubeJSPlugin {
         event.register(ResourceLocation.fromNamespaceAndPath("market", "market"), MarketRecipeJS.SCHEMA);
 
         //In World Recipes
-        event.register(ResourceLocation.fromNamespaceAndPath("inworldrecipes", "block_interaction"), BlockInteractionRecipeJS.SCHEMA);
-
+        if (ModList.get().isLoaded("inworldrecipes")) {
+            event.register(ResourceLocation.fromNamespaceAndPath("inworldrecipes", "block_interaction"), BlockInteractionRecipeJS.SCHEMA);
+        }
         //Cloche
         event.register(ResourceLocation.fromNamespaceAndPath("cloche", "cloche"), ClocheRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("cloche", "dimensional_upgrade"), DimensionalUpgradeRecipeJS.SCHEMA);

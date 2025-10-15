@@ -70,12 +70,12 @@ dependencies {
     runtimeOnly "curse.maven:bbl-core-1135181:6732331"
 
     //BBL Strainers
-    compileOnly "curse.maven:opolis-strainers-882351:6951682"
-    runtimeOnly "curse.maven:opolis-strainers-882351:6951682"
+    compileOnly "curse.maven:opolis-strainers-882351:7028523"
+    runtimeOnly "curse.maven:opolis-strainers-882351:7028523"
 
     //In World Recipes
-    compileOnly "curse.maven:in-world-recipes-1123257:6918301"
-    runtimeOnly "curse.maven:in-world-recipes-1123257:6918301"
+    compileOnly "curse.maven:in-world-recipes-1123257:7031541"
+    runtimeOnly "curse.maven:in-world-recipes-1123257:7031541"
 
     //GlitchCore
     compileOnly "curse.maven:glitchcore-955399:5660740"

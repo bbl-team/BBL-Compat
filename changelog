@@ -2,6 +2,12 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.4.12
+Remove Core Tags recipes that no longer work
+
+5.4.11
+Fixed InWorldRecipes Block Integration recipe trying to be added when mod not installed, fixes crashes and safe mod protection being triggered onm existing worlds
+
 5.4.10
 Fixed Pneumaticcraft fuels not working in latest casting update
 
