@@ -4,9 +4,13 @@ import com.benbenlaw.inworldrecipes.recipes.BlockTarget;
 import com.benbenlaw.inworldrecipes.recipes.BlockTargetCodec;
 import com.benbenlaw.inworldrecipes.util.ClickType;
 import com.benbenlaw.inworldrecipes.util.ClickTypeCodec;
+import com.benbenlaw.opoliscompat.Compat;
 import com.mojang.serialization.Codec;
 import dev.latvian.mods.kubejs.recipe.KubeRecipe;
+import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
+import dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext;
 import dev.latvian.mods.kubejs.recipe.match.ReplacementMatchInfo;
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.type.TypeInfo;
@@ -24,8 +28,13 @@ import net.minecraft.world.level.block.state.properties.Property;
 public class BlockTargetComponent implements RecipeComponent<BlockTarget> {
 
     public static final BlockTargetComponent INSTANCE = new BlockTargetComponent();
-
+    public static final RecipeComponentType<?> CONDITION = RecipeComponentType.unit(ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "block_target"), INSTANCE);
     private static final Codec<BlockTarget> CODEC = BlockTargetCodec.CODEC;
+
+    @Override
+    public RecipeComponentType<?> type() {
+        return CONDITION;
+    }
 
     @Override
     public Codec<BlockTarget> codec() {
@@ -38,7 +47,8 @@ public class BlockTargetComponent implements RecipeComponent<BlockTarget> {
     }
 
     @Override
-    public BlockTarget wrap(Context cx, KubeRecipe recipe, Object from) {
+    public BlockTarget wrap(RecipeScriptContext cx, Object from) {
+
         if (from instanceof BlockTarget target) {
             return target;
         }
@@ -95,9 +105,9 @@ public class BlockTargetComponent implements RecipeComponent<BlockTarget> {
         throw new RuntimeException("Cannot wrap object into BlockTarget: " + from);
     }
 
-
     @Override
-    public boolean matches(Context cx, KubeRecipe recipe, BlockTarget value, ReplacementMatchInfo match) {
+    public boolean matches(RecipeMatchContext cx, BlockTarget value, ReplacementMatchInfo match) {
         return true;
     }
+
 }

@@ -110,16 +110,16 @@ dependencies {
     runtimeOnly "curse.maven:opolis-utilities-649644:5728507"
 
     //JEI
-    compileOnly "curse.maven:jei-238222:5846880"
-    runtimeOnly "curse.maven:jei-238222:5846880"
+    compileOnly "curse.maven:jei-238222:7057366"
+    runtimeOnly "curse.maven:jei-238222:7057366"
 
     //KubeJS
-    compileOnly "curse.maven:kubejs-238086:5631423"
-    runtimeOnly "curse.maven:kubejs-238086:5631423"
+    compileOnly "curse.maven:kubejs-238086:7107528"
+    runtimeOnly "curse.maven:kubejs-238086:7107528"
 
     //Rhino
-    compileOnly "curse.maven:rhino-416294:5650008"
-    runtimeOnly "curse.maven:rhino-416294:5650008"
+    compileOnly "curse.maven:rhino-416294:7104526"
+    runtimeOnly "curse.maven:rhino-416294:7104526"
 
     //BBL Casting
     compileOnly "curse.maven:bbl-casting-1052163:6770873"

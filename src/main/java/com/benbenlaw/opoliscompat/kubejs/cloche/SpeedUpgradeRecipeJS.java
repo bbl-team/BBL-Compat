@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 public interface SpeedUpgradeRecipeJS {
 
     RecipeKey<Ingredient> UPGRADE_ITEM = IngredientComponent.INGREDIENT.inputKey("ingredient");
-    RecipeKey<String> MODIFIER_TYPE = StringComponent.NON_EMPTY.inputKey("modifier_type");
+    RecipeKey<String> MODIFIER_TYPE = StringComponent.STRING.inputKey("modifier_type");
     RecipeKey<Integer> DURATION =  NumberComponent.INT.inputKey("modifier");
 
     RecipeSchema SCHEMA = new RecipeSchema(UPGRADE_ITEM, MODIFIER_TYPE, DURATION);

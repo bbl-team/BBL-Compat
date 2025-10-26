@@ -1,11 +1,14 @@
 package com.benbenlaw.opoliscompat.kubejs;
 
 import com.benbenlaw.caveopolis.config.RecipeConfig;
+import com.benbenlaw.core.Core;
 import com.benbenlaw.core.recipe.ChanceResult;
+import com.benbenlaw.opoliscompat.Compat;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.latvian.mods.kubejs.recipe.KubeRecipe;
-import dev.latvian.mods.kubejs.recipe.component.ListRecipeComponent;
-import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
+import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
+import dev.latvian.mods.kubejs.recipe.component.*;
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.type.TypeInfo;
 import net.minecraft.core.NonNullList;
@@ -18,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
+import java.util.function.Function;
 
 
 import com.benbenlaw.core.recipe.ChanceResult;
@@ -35,6 +39,13 @@ public class ChanceResultComponent implements RecipeComponent<ChanceResult> {
 
     public static final ChanceResultComponent CHANCE_RESULT = new ChanceResultComponent();
 
+    public static final RecipeComponentType<?> CONDITION = RecipeComponentType.unit(ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "chance_result"), CHANCE_RESULT);
+
+    @Override
+    public RecipeComponentType<?> type() {
+        return CONDITION;
+    }
+
     @Override
     public Codec<ChanceResult> codec() {
         return ChanceResult.CODEC;
@@ -50,7 +61,7 @@ public class ChanceResultComponent implements RecipeComponent<ChanceResult> {
     }
 
     @Override
-    public ChanceResult wrap(Context cx, KubeRecipe recipe, Object from) {
+    public ChanceResult wrap(RecipeScriptContext cx, Object from) {
         if (from instanceof ChanceResult cr) {
             return cr;
         }

@@ -1,12 +1,16 @@
 package com.benbenlaw.opoliscompat.kubejs;
 
 import com.benbenlaw.core.recipe.ChanceResult;
+import com.benbenlaw.opoliscompat.Compat;
 import com.mojang.serialization.Codec;
 import dev.latvian.mods.kubejs.recipe.KubeRecipe;
+import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.type.TypeInfo;
 import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.List;
 
@@ -15,6 +19,10 @@ public class NonNullListChanceResultComponent implements RecipeComponent<NonNull
     private final RecipeComponent<ChanceResult> baseComponent;
     private final Codec<NonNullList<ChanceResult>> codec;
     private final TypeInfo typeInfo;
+    public static final NonNullListChanceResultComponent NON_NULL_LIST_CHANCE_RESULT_COMPONENT = new NonNullListChanceResultComponent(ChanceResultComponent.CHANCE_RESULT);
+
+    public static final RecipeComponentType<?> CONDITION = RecipeComponentType.unit(ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "nonnull_list_chance_result"), NON_NULL_LIST_CHANCE_RESULT_COMPONENT);
+
 
     public NonNullListChanceResultComponent(RecipeComponent<ChanceResult> baseComponent) {
         this.baseComponent = baseComponent;
@@ -30,6 +38,11 @@ public class NonNullListChanceResultComponent implements RecipeComponent<NonNull
     }
 
     @Override
+    public RecipeComponentType<?> type() {
+        return CONDITION;
+    }
+
+    @Override
     public Codec<NonNullList<ChanceResult>> codec() {
         return codec;
     }
@@ -40,7 +53,8 @@ public class NonNullListChanceResultComponent implements RecipeComponent<NonNull
     }
 
     @Override
-    public NonNullList<ChanceResult> wrap(Context cx, KubeRecipe recipe, Object from) {
+    public NonNullList<ChanceResult> wrap(RecipeScriptContext cx, Object from) {
+
         NonNullList<ChanceResult> nnList = NonNullList.create();
 
         if (from instanceof NonNullList<?> nnl) {
@@ -72,20 +86,20 @@ public class NonNullListChanceResultComponent implements RecipeComponent<NonNull
                     }
 
                     // Construct a ChanceResult from the item string and chance
-                    ChanceResult cr = baseComponent.wrap(cx, recipe, itemStr);
+                    ChanceResult cr = baseComponent.wrap(cx, itemStr);
 
                     // Create a new ChanceResult with overridden chance
                     nnList.add(new ChanceResult(cr.stack(), chance));
 
                 } else {
                     // Otherwise just delegate to base component wrap (which can handle NativeObject or String)
-                    nnList.add(baseComponent.wrap(cx, recipe, o));
+                    nnList.add(baseComponent.wrap(cx, o));
                 }
             }
             return nnList;
         } else {
             // Single element wrapped into a list
-            nnList.add(baseComponent.wrap(cx, recipe, from));
+            nnList.add(baseComponent.wrap(cx, from));
             return nnList;
         }
     }

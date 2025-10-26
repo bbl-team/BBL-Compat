@@ -16,7 +16,7 @@ public interface ClocheRecipeJS {
     RecipeKey<Ingredient> SOIL = IngredientComponent.INGREDIENT.inputKey("soil");
     RecipeKey<Integer> DURATION =  NumberComponent.INT.inputKey("duration");
     RecipeKey<List<ChanceResult>> OUTPUTS = ChanceResultComponent.CHANCE_RESULT.asList().inputKey("results");
-    RecipeKey<String> DIMENSION =  StringComponent.NON_EMPTY.inputKey("dimension").defaultOptional();
+    RecipeKey<String> DIMENSION =  StringComponent.STRING.inputKey("dimension").defaultOptional();
     RecipeKey<Ingredient> CATALYST = IngredientComponent.INGREDIENT.inputKey("catalyst").defaultOptional();
     RecipeKey<ItemStack> SHEARS_RESULT = ItemStackComponent.ITEM_STACK.inputKey("shears_result")
             .functionNames(List.of("shears_result", "shearsResult")).defaultOptional();;

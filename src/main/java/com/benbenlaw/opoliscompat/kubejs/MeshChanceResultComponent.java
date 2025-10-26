@@ -1,10 +1,13 @@
 package com.benbenlaw.opoliscompat.kubejs;
 
 import com.benbenlaw.core.recipe.ChanceResult;
+import com.benbenlaw.opoliscompat.Compat;
 import com.benbenlaw.strainers.recipe.MeshChanceResult;
 import com.mojang.serialization.Codec;
 import dev.latvian.mods.kubejs.recipe.KubeRecipe;
+import dev.latvian.mods.kubejs.recipe.RecipeScriptContext;
 import dev.latvian.mods.kubejs.recipe.component.RecipeComponent;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentType;
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.NativeObject;
 import dev.latvian.mods.rhino.type.TypeInfo;
@@ -17,6 +20,14 @@ public class MeshChanceResultComponent implements RecipeComponent<MeshChanceResu
 
     public static final MeshChanceResultComponent MESH_CHANCE_RESULT = new MeshChanceResultComponent();
 
+    public static final RecipeComponentType<?> CONDITION = RecipeComponentType.unit(ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "mesh_chance_result"), MESH_CHANCE_RESULT);
+
+
+    @Override
+    public RecipeComponentType<?> type() {
+        return CONDITION;
+    }
+
     @Override
     public Codec<MeshChanceResult> codec() {
         return MeshChanceResult.CODEC;
@@ -28,7 +39,8 @@ public class MeshChanceResultComponent implements RecipeComponent<MeshChanceResu
     }
 
     @Override
-    public MeshChanceResult wrap(Context cx, KubeRecipe recipe, Object from) {
+    public MeshChanceResult wrap(RecipeScriptContext cx, Object from) {
+
         if (from instanceof MeshChanceResult mcr) return mcr;
 
         if (from instanceof dev.latvian.mods.rhino.NativeArray arr) {

@@ -8,7 +8,7 @@ import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 public interface StrainerRecipeJS {
     RecipeKey<Ingredient> INPUT = IngredientComponent.INGREDIENT.inputKey("input");
-    RecipeKey<String> ABOVE_BLOCK = StringComponent.NON_EMPTY.key("aboveBlock", ComponentRole.INPUT);
+    RecipeKey<String> ABOVE_BLOCK = StringComponent.STRING.key("aboveBlock", ComponentRole.INPUT);
     RecipeKey<SizedIngredient> OUTPUT = SizedIngredientComponent.FLAT.outputKey("output");
     RecipeKey<Integer> MIN_MESH_TIER = NumberComponent.INT.inputKey("minMeshTier");
     RecipeKey<Double> CHANCE = NumberComponent.DOUBLE.outputKey("chance");

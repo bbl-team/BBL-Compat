@@ -2,6 +2,9 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.5.0
+- Updated to KubeJS 7.2
+
 5.4.12
 Remove Core Tags recipes that no longer work
 

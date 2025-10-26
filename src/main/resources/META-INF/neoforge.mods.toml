@@ -24,3 +24,10 @@ type="required"
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
+
+[[dependencies."${mod_id}"]]
+modId="kubejs"
+type="optional"
+versionRange="7.2,"
+ordering="NONE"
+side="BOTH"

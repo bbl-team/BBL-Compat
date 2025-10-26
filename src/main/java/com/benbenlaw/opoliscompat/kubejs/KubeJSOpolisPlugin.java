@@ -13,7 +13,7 @@ import com.benbenlaw.opoliscompat.kubejs.utilities.*;
 import dev.latvian.mods.kubejs.event.EventGroup;
 import dev.latvian.mods.kubejs.event.EventGroupRegistry;
 import dev.latvian.mods.kubejs.plugin.KubeJSPlugin;
-import dev.latvian.mods.kubejs.recipe.schema.RecipeComponentFactoryRegistry;
+import dev.latvian.mods.kubejs.recipe.component.RecipeComponentTypeRegistry;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
@@ -72,23 +72,20 @@ public class KubeJSOpolisPlugin implements KubeJSPlugin {
 
     }
 
-
     @Override
-    public void registerRecipeComponents(RecipeComponentFactoryRegistry registry) {
-
+    public void registerRecipeComponents(RecipeComponentTypeRegistry registry) {
         if (ModList.get().isLoaded("inworldrecipes")) {
-            registry.register(ClickTypeComponent.INSTANCE);
-            registry.register(BlockTargetComponent.INSTANCE);
+            registry.register(ClickTypeComponent.CONDITION);
+            registry.register(BlockTargetComponent.CONDITION);
         }
 
         if (ModList.get().isLoaded("strainers")) {
-            registry.register(MeshChanceResultComponent.MESH_CHANCE_RESULT);
+            registry.register(MeshChanceResultComponent.CONDITION);
         }
 
-        registry.register(ChanceResultComponent.CHANCE_RESULT);
-
-
+        registry.register(ChanceResultComponent.CONDITION);
     }
+
 
     @Override
     public void registerEvents(EventGroupRegistry registry) {

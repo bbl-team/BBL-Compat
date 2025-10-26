@@ -16,7 +16,7 @@ import java.util.List;
 public interface DimensionalUpgradeRecipeJS {
 
     RecipeKey<Ingredient> UPGRADE_ITEM = IngredientComponent.INGREDIENT.inputKey("ingredient");
-    RecipeKey<String> DIMENSION =  StringComponent.NON_EMPTY.inputKey("dimension");
+    RecipeKey<String> DIMENSION =  StringComponent.STRING.inputKey("dimension");
 
     RecipeSchema SCHEMA = new RecipeSchema(UPGRADE_ITEM, DIMENSION);
 
