@@ -39,6 +39,8 @@ public class WorldReplaceEvent {
 
             if (CompatStartupConfig.worldConversion.get()) {
 
+                //Caveopolis to Colors conversion
+
                 // Get the chunk from the event
                 ChunkAccess chunk = event.getChunk();
 

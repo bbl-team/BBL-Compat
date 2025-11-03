@@ -80,83 +80,83 @@ public class CompatRecipes extends RecipeProvider {
 
         //Biomes O' Plenty Cloche Recipes
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.ORIGIN_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.ORIGIN_SAPLING_RESULTS, BOPBlocks.ORIGIN_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.ORIGIN_SAPLING_RESULTS, new ItemStack(BOPBlocks.ORIGIN_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/origin_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.FLOWERING_OAK_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.FLOWERING_OAK_SAPLING_RESULTS, BOPBlocks.FLOWERING_OAK_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.FLOWERING_OAK_SAPLING_RESULTS, new ItemStack(BOPBlocks.FLOWERING_OAK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/flowering_oak_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.CYPRESS_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.CYPRESS_SAPLING_RESULTS, BOPBlocks.CYPRESS_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.CYPRESS_SAPLING_RESULTS, new ItemStack(BOPBlocks.CYPRESS_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/cypress_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.SNOWBLOSSOM_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.SNOWBLOSSOM_SAPLING_RESULTS, BOPBlocks.SNOWBLOSSOM_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.SNOWBLOSSOM_SAPLING_RESULTS, new ItemStack(BOPBlocks.SNOWBLOSSOM_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/snowblossom_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.RAINBOW_BIRCH_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.RAINBOW_BIRCH_SAPLING_RESULTS, BOPBlocks.RAINBOW_BIRCH_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.RAINBOW_BIRCH_SAPLING_RESULTS, new ItemStack(BOPBlocks.RAINBOW_BIRCH_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/rainbow_birch_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.FIR_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.FIR_SAPLING_RESULTS, BOPBlocks.FIR_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.FIR_SAPLING_RESULTS, new ItemStack(BOPBlocks.FIR_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/fir_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.PINE_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.PINE_SAPLING_RESULTS, BOPBlocks.PINE_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.PINE_SAPLING_RESULTS, new ItemStack(BOPBlocks.PINE_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/pine_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.RED_MAPLE_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.RED_MAPLE_SAPLING_RESULTS, BOPBlocks.RED_MAPLE_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.RED_MAPLE_SAPLING_RESULTS, new ItemStack(BOPBlocks.RED_MAPLE_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/red_maple_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.ORANGE_MAPLE_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.ORANGE_MAPLE_SAPLING_RESULTS, BOPBlocks.ORANGE_MAPLE_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.ORANGE_MAPLE_SAPLING_RESULTS, new ItemStack(BOPBlocks.ORANGE_MAPLE_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/orange_maple_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.YELLOW_MAPLE_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.YELLOW_MAPLE_SAPLING_RESULTS, BOPBlocks.YELLOW_MAPLE_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.YELLOW_MAPLE_SAPLING_RESULTS, new ItemStack(BOPBlocks.YELLOW_MAPLE_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/yellow_maple_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.MAHOGANY_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.MAHOGANY_SAPLING_RESULTS, BOPBlocks.MAHOGANY_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.MAHOGANY_SAPLING_RESULTS, new ItemStack(BOPBlocks.MAHOGANY_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/mahogany_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.REDWOOD_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.REDWOOD_SAPLING_RESULTS, BOPBlocks.REDWOOD_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.REDWOOD_SAPLING_RESULTS, new ItemStack(BOPBlocks.REDWOOD_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/redwood_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.JACARANDA_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.JACARANDA_SAPLING_RESULTS, BOPBlocks.JACARANDA_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.JACARANDA_SAPLING_RESULTS, new ItemStack(BOPBlocks.JACARANDA_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/jacaranda_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.PALM_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.PALM_SAPLING_RESULTS, BOPBlocks.PALM_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.PALM_SAPLING_RESULTS, new ItemStack(BOPBlocks.PALM_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/palm_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.WILLOW_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.WILLOW_SAPLING_RESULTS, BOPBlocks.WILLOW_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.WILLOW_SAPLING_RESULTS, new ItemStack(BOPBlocks.WILLOW_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/willow_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.DEAD_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.DEAD_SAPLING_RESULTS, BOPBlocks.DEAD_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.DEAD_SAPLING_RESULTS, new ItemStack(BOPBlocks.DEAD_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/dead_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.MAGIC_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.MAGIC_SAPLING_RESULTS, BOPBlocks.MAGIC_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.MAGIC_SAPLING_RESULTS, new ItemStack(BOPBlocks.MAGIC_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/magic_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.UMBRAN_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.UMBRAN_SAPLING_RESULTS, BOPBlocks.UMBRAN_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.UMBRAN_SAPLING_RESULTS, new ItemStack(BOPBlocks.UMBRAN_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/umbran_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.HELLBARK_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.HELLBARK_SAPLING_RESULTS, BOPBlocks.HELLBARK_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.HELLBARK_SAPLING_RESULTS, new ItemStack(BOPBlocks.HELLBARK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/hellbark_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(BOPBlocks.EMPYREAL_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, BiomesOPlentyResultsLists.EMPYREAL_SAPLING_RESULTS, BOPBlocks.EMPYREAL_LEAVES.asItem().getDefaultInstance())
+                        null, 1200, BiomesOPlentyResultsLists.EMPYREAL_SAPLING_RESULTS, new ItemStack(BOPBlocks.EMPYREAL_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("biomesoplenty")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/biomesoplenty/empereal_sapling"));
 
         createSimpleClocheBiomesOPlentyRecipe(Ingredient.of(BOPBlocks.ROSE.asItem()), Ingredient.of(ItemTags.DIRT), 1200, "rose", consumer);
@@ -203,43 +203,43 @@ public class CompatRecipes extends RecipeProvider {
 
         //Twilight Forest Cloche Recipes
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.TWILIGHT_OAK_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.TWILIGHT_OAK_SAPLING_RESULTS, TFBlocks.TWILIGHT_OAK_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.TWILIGHT_OAK_SAPLING_RESULTS, new ItemStack (TFBlocks.TWILIGHT_OAK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/twilight_oak_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.CANOPY_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.CANOPY_SAPLING_RESULTS, TFBlocks.CANOPY_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.CANOPY_SAPLING_RESULTS, new ItemStack (TFBlocks.CANOPY_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/canopy_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.MANGROVE_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.MANGROVE_SAPLING_RESULTS, TFBlocks.MANGROVE_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.MANGROVE_SAPLING_RESULTS, new ItemStack (TFBlocks.MANGROVE_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/mangrove_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.DARKWOOD_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.DARKWOOD_SAPLING_RESULTS, TFBlocks.DARK_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.DARKWOOD_SAPLING_RESULTS, new ItemStack (TFBlocks.DARK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/darkwood_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.TIME_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.TIME_SAPLING_RESULTS, TFBlocks.TIME_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.TIME_SAPLING_RESULTS, new ItemStack (TFBlocks.TIME_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/time_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.TRANSFORMATION_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.TRANSFORMATION_SAPLING_RESULTS, TFBlocks.TRANSFORMATION_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.TRANSFORMATION_SAPLING_RESULTS, new ItemStack (TFBlocks.TRANSFORMATION_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/transformation_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.MINING_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.MINERS_SAPLING_RESULTS, TFBlocks.MINING_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.MINERS_SAPLING_RESULTS, new ItemStack (TFBlocks.MINING_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/mining_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.SORTING_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.SORTING_SAPLING_RESULTS, TFBlocks.SORTING_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.SORTING_SAPLING_RESULTS, new ItemStack (TFBlocks.SORTING_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/sorting_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.HOLLOW_OAK_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.ROBUST_OAK_SAPLING_RESULTS, TFBlocks.TWILIGHT_OAK_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.ROBUST_OAK_SAPLING_RESULTS, new ItemStack (TFBlocks.TWILIGHT_OAK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/robust_oak_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.RAINBOW_OAK_SAPLING), Ingredient.of(ItemTags.DIRT), null,
-                        null, 1200, TwilightResultLists.RAINBOW_OAK_RESULTS, TFBlocks.RAINBOW_OAK_LEAVES.toStack())
+                        null, 1200, TwilightResultLists.RAINBOW_OAK_RESULTS, new ItemStack (TFBlocks.RAINBOW_OAK_LEAVES.asItem().getDefaultInstance().getItemHolder(), 2))
                 .save(consumer.withConditions(new ModLoadedCondition("twilightforest")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/twilightforest/rainbow_oak_sapling"));
 
         ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(TFBlocks.TORCHBERRY_PLANT), Ingredient.of(ItemTags.DIRT), null,
@@ -332,7 +332,7 @@ public class CompatRecipes extends RecipeProvider {
             NonNullList<ChanceResult> resultsColors = createColoredSaplingResultsColors(color);
 
             ClocheRecipeProvider.ClocheRecipeBuilder(Ingredient.of(SAPLINGS.get(color + "_sapling")), Ingredient.of(ItemTags.DIRT), null,
-                            null, 1200, resultsColors, LEAVES.get(color + "_leaves").toStack())
+                            null, 1200, resultsColors, new ItemStack(LEAVES.get(color + "_leaves").toStack().getItemHolder(), 2))
                     .save(consumer.withConditions(new ModLoadedCondition("colors")).withConditions(new ModLoadedCondition("cloche")), ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, "cloche/colors/" + color + "_sapling"));
 
             //Poppy in Cloche - Colors

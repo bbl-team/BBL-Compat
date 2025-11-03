@@ -2,6 +2,10 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.6.0
+- Fixed cloche recipes only producing one leaf block for colors, twilight forest and biomes o plenty saplings
+- Added new config option to disable ore generation, removes all world gen ors as long as there are tagged to c:ores block tag
+
 5.5.0
 - Updated to KubeJS 7.2
 
