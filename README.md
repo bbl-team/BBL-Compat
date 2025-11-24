@@ -13,3 +13,4 @@ https://github.com/bbl-team/crafter
 https://github.com/bbl-team/BBL-Taps
 https://github.com/bbl-team/Essence
 https://github.com/bbl-team/Geodeopolis
+[https://docs.github.com/repositories/creating-and-managing-repositories/quickstart-for-repositories](ที่เก็บแรกของหน้าผิดพลาด)
