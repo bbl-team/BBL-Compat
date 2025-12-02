@@ -4,6 +4,11 @@ import com.benbenlaw.opoliscompat.Compat;
 import com.benbenlaw.opoliscompat.config.CompatStartupConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -24,6 +29,7 @@ public class BlockReplacingEvent {
     public static void onChunkGenerationRemovals(ChunkEvent.Load event) {
 
         if (!CompatStartupConfig.oreRemoval.get()) return;
+        TagKey<Block> blockTag = TagKey.create(Registries.BLOCK, ResourceLocation.parse(CompatStartupConfig.blockTag.get()));
 
         boolean isNewChunk = event.isNewChunk();
 
@@ -43,7 +49,7 @@ public class BlockReplacingEvent {
 
                     Block block = originalState.getBlock();
 
-                    if (block.builtInRegistryHolder().is(Tags.Blocks.ORES)) {
+                    if (block.builtInRegistryHolder().is(blockTag)) {
 
                         BlockState newBlockState = getReplacementBlockState(chunk, pos);
                         //BlockState newBlockState = Blocks.DIAMOND_BLOCK.defaultBlockState();

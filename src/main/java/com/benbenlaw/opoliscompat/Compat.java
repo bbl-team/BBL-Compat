@@ -18,7 +18,5 @@ public class Compat {
 
     public Compat(final IEventBus eventBus, final ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.STARTUP, CompatStartupConfig.SPEC, "bbl/compat/startup.toml");
-
-
     }
 }

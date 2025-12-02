@@ -8,6 +8,7 @@ public class CompatStartupConfig {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.ConfigValue<Boolean> worldConversion;
     public static final ModConfigSpec.ConfigValue<Boolean> oreRemoval;
+    public static final ModConfigSpec.ConfigValue<String> blockTag;
 
 
 
@@ -21,6 +22,9 @@ public class CompatStartupConfig {
 
         oreRemoval = BUILDER.comment("When enables all ores will be removed from world generation, only triggers during new chunk generation")
                 .define("Disable Ore Gen", false);
+
+        blockTag = BUILDER.comment("The block tag used to determine which blocks to replace when ore removal is enabled")
+                .define("Block Tag for Ore Removal", "c:ores");
 
 
         BUILDER.pop();

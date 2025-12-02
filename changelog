@@ -2,6 +2,9 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.6.1
+- Disable ore generation can now be a tag instead of just c:ores
+
 5.6.0
 - Fixed cloche recipes only producing one leaf block for colors, twilight forest and biomes o plenty saplings
 - Added new config option to disable ore generation, removes all world gen ors as long as there are tagged to c:ores block tag
@@ -17,6 +20,7 @@ Fixed InWorldRecipes Block Integration recipe trying to be added when mod not in
 
 5.4.10
 Fixed Pneumaticcraft fuels not working in latest casting update
+
 
 5.4.9
 Ignore Block State for In World Recipe Block Integration now optional, prevents issues with errors in logs when field is missing
