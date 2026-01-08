@@ -2,6 +2,18 @@ Changelog BBL Compat
 
 //Add Oh Biomes Yo Go Saplings and Flowers to the cloche
 
+5.6.5
+- Added Block Replacement for just blocks not tags
+
+5.6.4
+- Fixed replacement tag checking against itself causing stack overflow
+
+5.6.3
+- Even better performance of ore generation disabling
+
+5.6.2
+- Improved performance of ore generation disabling
+
 5.6.1
 - Disable ore generation can now be a tag instead of just c:ores
 

@@ -20,8 +20,43 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.level.ChunkEvent;
 
+import java.util.Map;
+
 @EventBusSubscriber(modid = Compat.MOD_ID)
 public class BlockReplacingEvent {
+
+    private static final Map<Block, Block> REPLACEMENT_MAP = CompatStartupConfig.getBlockReplacementMap();
+
+    @SubscribeEvent
+    public static void blockReplacement(ChunkEvent.Load event) {
+
+        ChunkAccess chunk = event.getChunk();
+
+        int startX = chunk.getPos().x << 4;
+        int startZ = chunk.getPos().z << 4;
+
+        for (int x = startX; x < startX + 16; x++) {
+            for (int z = startZ; z < startZ + 16; z++) {
+                for (int y = -64; y < 256; y++) {
+                    BlockPos pos = new BlockPos(x, y, z);
+
+                    Block from = chunk.getBlockState(pos).getBlock();
+
+                    if (REPLACEMENT_MAP.containsKey(from)) {
+                        Block to = REPLACEMENT_MAP.get(from);
+                        BlockState newBlockState = to.defaultBlockState();
+
+                        chunk.setBlockState(pos, newBlockState, false);
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    public static TagKey<Block> blockTag = TagKey.create(Registries.BLOCK, ResourceLocation.parse(CompatStartupConfig.blockTag.get()));
 
     /// Add this to BBL Core in the future 1.21.10 +
     @Deprecated(since = "5.2.0")
@@ -29,7 +64,6 @@ public class BlockReplacingEvent {
     public static void onChunkGenerationRemovals(ChunkEvent.Load event) {
 
         if (!CompatStartupConfig.oreRemoval.get()) return;
-        TagKey<Block> blockTag = TagKey.create(Registries.BLOCK, ResourceLocation.parse(CompatStartupConfig.blockTag.get()));
 
         boolean isNewChunk = event.isNewChunk();
 
@@ -76,8 +110,8 @@ public class BlockReplacingEvent {
             if (!neighborState.isAir()
                     && neighborState.getFluidState().isEmpty()
                     && neighborState.isSolid()
-                    && !neighborState.is(Tags.Blocks.ORES)
-                    && neighborState.getCollisionShape(chunkAccess, neighborPos).isEmpty() == false) {
+                    && !neighborState.is(blockTag)
+                    && !neighborState.getCollisionShape(chunkAccess, neighborPos).isEmpty()) {
                 return neighborState;
             }
 
