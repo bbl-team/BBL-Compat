@@ -18,6 +18,7 @@ public class CompatStartupConfig {
     public static final ModConfigSpec.ConfigValue<Boolean> oreRemoval;
     public static final ModConfigSpec.ConfigValue<String> blockTag;
     public static final ModConfigSpec.ConfigValue<List<? extends String>> blockReplacements;
+    public static final ModConfigSpec.ConfigValue<Boolean> blockReplacementsEnabled;
 
 
 
@@ -38,6 +39,9 @@ public class CompatStartupConfig {
         blockReplacements = BUILDER.comment("A list of block replacements in the format 'block_to_replace, replacement_block'. E.g minecraft:iron_ore=minecraft:stone")
                 .defineList("Block Replacements", List.of(""),
                         obj -> obj instanceof String);
+
+        blockReplacementsEnabled = BUILDER.comment("Enables block replacements defined in the block replacements list")
+                .define("Enable Block Replacements", false);
 
 
         BUILDER.pop();

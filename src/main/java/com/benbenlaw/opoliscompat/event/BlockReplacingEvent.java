@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.chunk.LevelChunkSection;
 import net.minecraft.world.level.material.FluidState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -30,30 +31,28 @@ public class BlockReplacingEvent {
     @SubscribeEvent
     public static void blockReplacement(ChunkEvent.Load event) {
 
+        Map<Block, Block> replacements = CompatStartupConfig.getBlockReplacementMap();
+        if (replacements.isEmpty()) return;
+        if (!CompatStartupConfig.blockReplacementsEnabled.get()) return;
+
         ChunkAccess chunk = event.getChunk();
 
-        int startX = chunk.getPos().x << 4;
-        int startZ = chunk.getPos().z << 4;
+        for (LevelChunkSection section : chunk.getSections()) {
+            if (section == null || section.hasOnlyAir()) continue;
 
-        for (int x = startX; x < startX + 16; x++) {
-            for (int z = startZ; z < startZ + 16; z++) {
-                for (int y = -64; y < 256; y++) {
-                    BlockPos pos = new BlockPos(x, y, z);
+            for (int x = 0; x < 16; x++) {
+                for (int y = 0; y < 16; y++) {
+                    for (int z = 0; z < 16; z++) {
 
-                    Block from = chunk.getBlockState(pos).getBlock();
-
-                    if (REPLACEMENT_MAP.containsKey(from)) {
-                        Block to = REPLACEMENT_MAP.get(from);
-                        BlockState newBlockState = to.defaultBlockState();
-
-                        chunk.setBlockState(pos, newBlockState, false);
+                        BlockState state = section.getBlockState(x, y, z);
+                        Block to = replacements.get(state.getBlock());
+                        if (to != null) {
+                            section.setBlockState(x, y, z, to.defaultBlockState());
+                        }
                     }
                 }
             }
         }
-
-
-
     }
 
     public static TagKey<Block> blockTag = TagKey.create(Registries.BLOCK, ResourceLocation.parse(CompatStartupConfig.blockTag.get()));
