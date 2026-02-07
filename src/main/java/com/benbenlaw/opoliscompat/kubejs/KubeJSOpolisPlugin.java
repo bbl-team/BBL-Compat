@@ -30,7 +30,7 @@ public class KubeJSOpolisPlugin implements KubeJSPlugin {
         event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "drying_table"), DryingRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "fluid_generator"), FluidGenRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "resource_generator"), ResourceGenRecipeJS.SCHEMA);
-        event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "soaking_table"), ResourceGenRecipeJS.SCHEMA);
+        event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "soaking_table"), SoakingRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "speed_upgrades"), SpeedUpgradeRecipeJS.SCHEMA);
         event.register(ResourceLocation.fromNamespaceAndPath("opolisutilities", "summoning_block"), SummoningRecipeJS.SCHEMA);
 
